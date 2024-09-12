@@ -1,20 +1,58 @@
-## Laravel Job Board
+# Job Application Portal
 
-This is an open-source job board application powered by Laravel, origially built for a [video tutorial series](https://www.youtube.com/watch?v=4ZrOXG2B0dU&list=PL36CGZHZJqsWs907QwJrWSbN2g2NNPn6w&index=1) on YouTube. The goal of this is to let you self-host your own job board website, similar to larajobs.com or remoteok.io.
+## Project Overview
 
-Included currently are features like:
+This project is a **Job Application Portal** where candidates can browse job listings and submit their applications. Employers can review applications, accept or reject them, and manage job postings. The project is built using **Laravel** for the backend and uses **MySQL** for the database.
 
-- Individual SEO-friendly listing pages
-- Payment processing through Stripe
-- User account authentication
-- A simple, mobile-friendly layout with TailwindCSS
+---
 
-**Note:** If you are coming from YouTube and are looking for the original code from the tutorial series, please see the [video-source](https://github.com/aschmelyun/laravel-job-board/tree/video-source) branch.
+## Features
 
-## Contributing
+### Candidate Features:
+- **Browse Job Listings**: Candidates can view all available job listings on the platform.
+- **Submit Applications**: Candidates can submit job applications for any job they are interested in.
+- **View Application Status**: Candidates can view whether their application has been accepted or rejected.
 
-If you found a bug or would like to request a new feature, feel free to [create an issue](https://github.com/aschmelyun/laravel-job-board/issues/new) on this repo. Depending on how complex or elaborate it is, it will potentially be used as future content added on to the original video tutorial series. Pull requests are also welcome, and will be evaluated on a case-by-case basis!
+### Employer Features:
+- **Manage Job Listings**: Employers can create, edit, and delete job postings.
+- **Review Applications**: Employers can view all applications submitted for their job listings.
+- **Accept/Reject Applications**: Employers have the option to accept or reject submitted applications.
 
-## License
+### Admin Features:
+- **Admin Dashboard**: Admin can manage all job listings and user accounts.
+- **User Management**: Admin can manage both employers and candidates.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+---
+
+## How It Works
+
+### 1. **Job Listings Page**
+   - Candidates can browse available job listings and view details for each job. 
+   - Job details include job title, description, requirements, and application deadline.
+
+### 2. **Application Submission**
+   - Candidates can fill out an application form that includes their details, skills, and optionally upload a resume or other documents.
+   - The submitted application will be stored in the database and can be reviewed by the employer.
+
+### 3. **Employer Dashboard**
+   - Employers can log in and access a dashboard that lists all the applications for their posted jobs.
+   - For each application, the employer can:
+     - **Accept the application**: The status will be updated to "Accepted," and an email notification is sent to the candidate.
+     - **Reject the application**: The status will be updated to "Rejected," and an email notification is sent to the candidate.
+
+### 4. **Notifications**
+   - Candidates will receive email notifications when their application is accepted or rejected.
+
+---
+
+## Technologies Used
+
+- **Laravel**: PHP framework for backend development.
+- **MySQL**: Relational database used to store all data (job listings, applications, users).
+- **Blade**: Laravel's templating engine for frontend views.
+- **Bootstrap**: CSS framework for responsive design.
+- **JavaScript**: Enhances interactivity in the frontend.
+- **Mailtrap**: Used for testing email notifications in a development environment.
+
+---
+
